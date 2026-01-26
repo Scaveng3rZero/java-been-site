@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java Been Coffee Co.</title>
+  <link rel="stylesheet" href="file:///C|/Users/irela/Scaveng3r/Brand Assets/Progress/css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="file:///C|/Users/irela/Scaveng3r/Brand Assets/Progress/index.html">
+        <span class="brand-mark" aria-hidden="true">☕</span>
+        <span class="brand-text">Java Been</span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="nav-link active" href="file:///C|/Users/irela/Scaveng3r/Brand Assets/Progress/index.html">Home</a>
+        <a class="nav-link" href="file:///C|/Users/irela/Scaveng3r/Brand Assets/Progress/menu.html">Menu</a>
+        <a class="nav-link" href="file:///C|/Users/irela/Scaveng3r/Brand Assets/Progress/about.html">About</a>
+        <a class="nav-link" href="file:///C|/Users/irela/Scaveng3r/Brand Assets/Progress/locations.html">Locations</a>
+        <a class="nav-link" href="file:///C|/Users/irela/Scaveng3r/Brand Assets/Progress/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+  <section class="section">
+    <div class="container">
+      <h1>About Java Been</h1>
+      <p>
+        Java Been is your neighborhood café — crafted drinks, fresh bites, and a space built for comfort.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <h2>Our Beans</h2>
+          <p>Small-batch roasting with a smooth, balanced finish.</p>
+        </article>
+        <article class="card">
+          <h2>Our Space</h2>
+          <p>Designed for studying, meetings, and hanging out.</p>
+        </article>
+        <article class="card">
+          <h2>Our People</h2>
+          <p>Friendly baristas who remember your usual.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Java Been Coffee Co.</p>
+      <p class="muted">Built for your mock-up → real website project.</p>
+    </div>
+  </footer>
+
+  <script>
+    // tiny baseline JS: year + mobile nav
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const btn = document.querySelector(".nav-toggle");
+    const nav = document.getElementById("site-nav");
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
