@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Java Been Coffee Co.</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="index.html" aria-label="Java Been Home">
+        <img src="jb-bw.png" alt="Java Been">
+      </a>
+
+      <button class="hamburger" type="button"
+        aria-controls="site-nav"
+        aria-expanded="false"
+        aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="site-nav" class="nav" aria-label="Primary">
+      <a class="active" href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+        <a href="locations.html">Locations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main" class="page home">
+    <!-- Hero -->
+    <section class="home-hero">
+      <h1 class="home-title">JAVA BEEN</h1>
+      <p class="home-tagline">
+        Crafted coffee.<br>
+        Cozy vibes.
+      </p>
+
+      <a class="home-cta" href="menu.html">
+        View Menu
+      </a>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="home-links">
+      <a class="home-card" href="menu.html">
+        <span class="home-card-title">MENU</span>
+      </a>
+
+      <a class="home-card" href="locations.html">
+        <span class="home-card-title">LOCATIONS</span>
+      </a>
+
+      <a class="home-card" href="about.html">
+        <span class="home-card-title">ABOUT US</span>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    // mobile nav toggle
+    const btn = document.querySelector(".hamburger");
+    const nav = document.getElementById("site-nav");
+
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
