@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="css/style.css">
   <style type="text/css">
   </style>
+
+	<!-- jQuery (required for Module 3) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	
 </head>
 
-<!-- jQuery (required for Module 3) -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 	
 	
 <body>
@@ -72,9 +75,6 @@
   </div>
 </section>
 
-
-      </p>
-
       <a class="home-cta" href="menu.html">
         View Menu
       </a>
@@ -95,18 +95,6 @@
       </a>
     </section>
   </main>
-
-  <script>
-    // mobile nav toggle
-    const btn = document.querySelector(".hamburger");
-    const nav = document.getElementById("site-nav");
-
-    btn.addEventListener("click", () => {
-      const expanded = btn.getAttribute("aria-expanded") === "true";
-      btn.setAttribute("aria-expanded", String(!expanded));
-      nav.classList.toggle("open");
-    });
-  </script>
 	
 	<script>
 $(function () {
@@ -139,4 +127,5 @@ $(function () {
 	
 </body>
 </html>
+
 
