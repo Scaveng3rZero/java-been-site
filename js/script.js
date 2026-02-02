@@ -27,5 +27,45 @@ $(function () {
     );
   });
 
-});
+  // Contact form validation
+  $("#contact-form").on("submit", function (e) {
+    e.preventDefault();
 
+    let isValid = true;
+
+    // Clear previous error messages
+    $(".error-message").text("");
+
+    const name = $("#name").val().trim();
+    const email = $("#email").val().trim();
+    const message = $("#message").val().trim();
+
+    if (name === "") {
+      $("#name").next(".error-message")
+        .text("Please enter your name.");
+      isValid = false;
+    }
+
+    if (email === "") {
+      $("#email").next(".error-message")
+        .text("Please enter your email.");
+      isValid = false;
+    } else if (!email.includes("@")) {
+      $("#email").next(".error-message")
+        .text("Please enter a valid email address.");
+      isValid = false;
+    }
+
+    if (message === "") {
+      $("#message").next(".error-message")
+        .text("Please enter a message.");
+      isValid = false;
+    }
+
+    if (isValid) {
+      $("#form-success").removeClass("is-hidden");
+      this.reset();
+    }
+  });
+
+});
