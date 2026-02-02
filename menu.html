@@ -7,9 +7,6 @@
   <link rel="stylesheet" href="css/style.css">
   <style type="text/css">
   </style>
-
-	<!-- jQuery (required for Module 3) -->
-<script src="js/script.js"></script>
 	
 </head>
 
@@ -23,7 +20,7 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="logo" href="index.html" aria-label="Java Been Home">
-        <img src="jb-bw.png" alt="Java Been">
+        <img src="img/jb-bw.png" alt="Java Been">
       </a>
 
       <button class="hamburger" type="button"
@@ -97,38 +94,14 @@
   </main>
 	
 	<script>
-$(function () {
 
-  // Hamburger menu (jQuery version)
-  $(".hamburger").on("click", function () {
-    const expanded = $(this).attr("aria-expanded") === "true";
-    $(this).attr("aria-expanded", String(!expanded));
-    $(".nav").toggleClass("open");
-  });
-
-  // Tabs (DRINKS / FOOD)
-  $(".menu-tab").on("click", function () {
-    // active tab styling + ARIA
-    $(".menu-tab").removeClass("active").attr("aria-selected", "false");
-    $(this).addClass("active").attr("aria-selected", "true");
-
-    // show the right panel
-    const target = $(this).data("target"); // "#drinks" or "#food"
-    $(".menu-panel").addClass("is-hidden");
-    $(target).removeClass("is-hidden");
-
-    // small UX touch: scroll panels into view
-    $("html, body").animate({ scrollTop: $(".menu-title").offset().top - 10 }, 200);
-  });
-
-});
-</script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="js/script.js"></script>
 	
 </body>
 </html>
+
 
 
 
