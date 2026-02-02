@@ -13,14 +13,14 @@ button { font: inherit; }
 
 /* Theme (tune these to match Photoshop) */
 :root{
-  --bg: #ded6a7;       /* warm tan */
-  --bar: #5a2a14;      /* deep coffee brown */
-  --bar2: #6b3218;     /* slight gradient */
-  --ink: #3b2414;      /* body text */
-  --accent: #7a2d1b;   /* menu/title text */
+  --bg: #ded6a7;
+  --bar: #5a2a14;
+  --bar2:#6b3218;
+  --ink:#3b2414;
+  --accent:#7a2d1b;
   --line: rgba(59,36,20,.35);
 
-  --max: 420px;        /* keeps it phone-like on desktop */
+  --max: 1100px;     /* desktop container width */
   --radius: 12px;
 }
 
@@ -46,12 +46,6 @@ body{
   z-index: 999;
 }
 
-/* Main “phone canvas” container */
-.page{
-  width: min(var(--max), 92vw);
-  margin: 0 auto;
-  padding: 18px 16px 34px;
-}
 
 /* =========================
    Top bar (logo + hamburger)
@@ -63,14 +57,7 @@ body{
   z-index: 100;
 }
 
-.topbar-inner{
-  width: min(var(--max), 92vw);
-  margin: 0 auto;
-  padding: 12px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 /* Logo sizing (fixes “logo too big”) */
 .logo img{
@@ -78,15 +65,7 @@ body{
   width: auto;
 }
 
-/* Hamburger icon */
-.hamburger{
-  background: transparent;
-  border: 0;
-  padding: 10px;
-  display: inline-grid;
-  gap: 5px;
-  cursor: pointer;
-}
+
 .hamburger span{
   width: 26px;
   height: 3px;
@@ -94,14 +73,6 @@ body{
   border-radius: 3px;
 }
 
-/* Dropdown nav (optional, used if you add it) */
-.nav{
-  width: min(var(--max), 92vw);
-  margin: 0 auto;
-  display: none;
-  padding: 10px 12px 14px;
-}
-.nav.open{ display: block; }
 
 .nav a{
   display: block;
@@ -186,6 +157,80 @@ body{
   background: var(--accent);
   border-radius: 999px;
 }
+
+/* =========================
+   Desktop-first layout
+   ========================= */
+
+/* Main container on desktop */
+.page{
+  width: min(var(--max), 92vw);
+  margin: 0 auto;
+  padding: 28px 16px 44px;
+}
+
+/* Header container */
+.topbar-inner{
+  width: min(var(--max), 92vw);
+  margin: 0 auto;
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Desktop nav: show links horizontally */
+.nav{
+  width: min(var(--max), 92vw);
+  margin: 0 auto;
+  display: flex;
+  gap: 14px;
+  padding: 10px 12px 14px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Desktop nav links */
+.nav a{
+  display: inline-block;
+  padding: 8px 10px;
+  border-top: 0;
+  color: rgba(255,255,255,.92);
+  border-radius: 10px;
+}
+.nav a:hover{ background: rgba(255,255,255,.12); }
+.nav a.active{ font-weight: 900; }
+
+/* Desktop hamburger hidden */
+.hamburger{ display: none; }
+
+/* =========================
+   Mobile layout (<= 768px)
+   ========================= */
+@media (max-width: 768px){
+
+  .hamburger{ display: inline-grid; }
+
+  .nav{
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    justify-content: flex-start;
+    padding: 10px 12px 14px;
+  }
+  .nav.open{ display: block; }
+
+  .nav a{
+    display: block;
+    padding: 10px 8px;
+    border-top: 1px solid rgba(255,255,255,.18);
+    border-radius: 0;
+  }
+
+  .page{ padding: 18px 16px 34px; }
+}
+
+
 /* jQuery tab panels */
 .menu-panel.is-hidden { display: none; }
 
