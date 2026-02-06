@@ -247,11 +247,10 @@ body{
 @media (max-width: 480px){
   .menu-title{ font-size: 32px; }
   .page-title{ font-size: 34px; }
-
   .menu-tabs{ margin: 8px 0 12px; }
-     .grid{ gap: 10px; }
-
+  .grid{ gap: 10px; }
 }
+
 
 /* Hide success message until JS reveals it */
 #form-success.is-hidden{ display: none; }
