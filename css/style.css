@@ -239,11 +239,15 @@ body{
    Mobile layout (<= 768px)
    ========================= */
 @media (max-width: 768px){
-  .hamburger{ padding: 12px 14px; }
-  .hamburger span{ width: 30px; }
-}
 
-   
+  /* show hamburger on mobile */
+  .hamburger{
+    display: inline-grid;
+    padding: 12px 14px;
+  }
+  .hamburger span{ width: 30px; }
+
+  /* mobile nav becomes dropdown */
   .nav{
     display: none;
     flex-direction: column;
@@ -261,11 +265,16 @@ body{
   }
 
   .nav a:hover{ background: rgba(255,255,255,.10); }
-  .nav a.active{ font-weight: 900; text-decoration: underline; }
+  .nav a.active{
+    font-weight: 900;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 
-   
   .page{ padding: 18px 16px 34px; }
 }
+
+
 
 @media (max-width: 480px){
   .menu-title{ font-size: 32px; }
