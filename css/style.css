@@ -64,13 +64,34 @@ body{
   height: 34px;
   width: auto;
 }
+/* Hamburger button (make it visible + tappable) */
+.hamburger{
+  background: rgba(255,255,255,.12);
+  border: 2px solid rgba(255,255,255,.75);
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+
+  display: inline-grid;
+  gap: 6px;
+
+  /* keeps it from shrinking weirdly */
+  flex: 0 0 auto;
+}
 
 
 .hamburger span{
-  width: 26px;
-  height: 3px;
-  background: rgba(255,255,255,.9);
-  border-radius: 3px;
+  width: 28px;
+  height: 4px;                 /* thicker */
+  background: #fff;            /* max contrast */
+  border-radius: 999px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.35); /* subtle definition */
+}
+.hamburger:active{
+  transform: scale(0.98);
+}
+.hamburger:hover{
+  background: rgba(255,255,255,.18);
 }
 
 
@@ -218,8 +239,10 @@ body{
    Mobile layout (<= 768px)
    ========================= */
 @media (max-width: 768px){
+  .hamburger{ padding: 12px 14px; }
+  .hamburger span{ width: 30px; }
+}
 
-  .hamburger{ display: inline-grid; }
    
   .nav{
     display: none;
