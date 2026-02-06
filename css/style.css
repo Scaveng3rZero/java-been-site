@@ -203,7 +203,13 @@ body{
   border-radius: 10px;
 }
 .nav a:hover{ background: rgba(255,255,255,.12); }
-.nav a.active{ font-weight: 900; }
+.nav a.active{
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+
 
 /* Desktop hamburger hidden */
 .hamburger{ display: none; }
@@ -243,6 +249,8 @@ body{
   .page-title{ font-size: 34px; }
 
   .menu-tabs{ margin: 8px 0 12px; }
+     .grid{ gap: 10px; }
+
 }
 
 /* Hide success message until JS reveals it */
