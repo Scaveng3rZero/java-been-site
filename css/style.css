@@ -330,4 +330,64 @@ body{
   letter-spacing: .5px;
 }
 
+/* =========================
+   Contact Form (Module 5)
+   ========================= */
+
+#contact-form{
+  max-width: 620px;
+  margin-top: 18px;
+}
+
+.form-group{
+  margin: 14px 0;
+}
+
+.form-group label{
+  display: block;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea{
+  width: 100%;
+  padding: 12px 12px;
+  border: 2px solid rgba(59,36,20,.25);
+  border-radius: 10px;
+  background: rgba(255,255,255,.55);
+  color: var(--ink);
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  outline: 3px solid rgba(122,45,27,.25);
+  outline-offset: 2px;
+}
+
+/* Error messages (your <small class="error-message">) */
+.error-message{
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #b00020;
+  min-height: 1em; /* prevents layout jump when empty */
+}
+
+/* Invalid field styling (used by JS) */
+.is-invalid{
+  border-color: #b00020 !important;
+  background: rgba(255,240,240,.85) !important;
+}
+
+/* Success message styling */
+#form-success{
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(155,232,178,.35);
+  border: 2px solid rgba(155,232,178,.65);
+  font-weight: 800;
+}
 
