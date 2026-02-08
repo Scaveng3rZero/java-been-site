@@ -365,6 +365,9 @@ body{
   outline-offset: 2px;
 }
 
+.form-group textarea { resize: vertical; }
+
+
 /* Error messages (your <small class="error-message">) */
 .error-message{
   display: block;
@@ -389,5 +392,10 @@ body{
   background: rgba(155,232,178,.35);
   border: 2px solid rgba(155,232,178,.65);
   font-weight: 800;
+}
+
+.is-invalid:focus{
+  outline: 3px solid rgba(176,0,32,.25) !important;
+  outline-offset: 2px;
 }
 
