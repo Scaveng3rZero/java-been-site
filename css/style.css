@@ -331,11 +331,8 @@ body{
 }
 
 .hero {
-  background: url("img/hero.png") center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url("../img/hero.png") center/cover no-repeat;
+  min-height: 80vh;   /* better than fixed height */
   position: relative;
 }
 
@@ -343,7 +340,7 @@ body{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(59,36,20,0.45); /* warm overlay */
+  background: rgba(59,36,20,0.45);
 }
 
 .visually-hidden{
