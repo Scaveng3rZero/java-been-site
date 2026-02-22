@@ -330,6 +330,22 @@ body{
   letter-spacing: .5px;
 }
 
+.hero {
+  background: url("images/hero.png") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(59,36,20,0.45); /* warm overlay */
+}
+
 /* =========================
    Contact Form (Module 5)
    ========================= */
